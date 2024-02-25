@@ -1,0 +1,15 @@
+import pandas as pd
+var=pd.DataFrame({"Name":("a","b","c","d","a","a","c","b","d","b","c"),"S1":("22","11","65","43","55","23","24","34","12","56","90")
+                  ,"S2":("23","24","34","12","56","90","22","11","65","43","55")})
+print(var)
+varnew=var.groupby("Name")
+for x,y in varnew:
+    print(x)
+    print(y)
+    print()
+print()
+print(varnew.get_group("a"))
+print(varnew.min())
+print(varnew.max())
+li=list(varnew)
+print(li)

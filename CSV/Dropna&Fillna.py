@@ -1,0 +1,22 @@
+import pandas as pd
+y=pd.read_csv("../Dataset/1000_popular_hindi_spotify.csv")
+x=y.head(15)
+print(x)
+print(x.dropna())
+print(x.dropna(axis=1))#axis=1 for column
+print(x.dropna(how="any"))
+print(x.dropna(how="all"))
+print(x.dropna(subset="Artists"))
+print(x.columns)
+x.dropna(inplace=True)
+print(x)
+print(x.dropna(thresh=1))
+#fillna
+print()
+print()
+print()
+print()
+print(x.fillna("YASSSSSSSSS"))
+var=x.dropna(subset="Name")
+print(var)
+print(var.fillna({"ID":"HELLOOOOO"}))
